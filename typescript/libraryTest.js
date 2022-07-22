@@ -1,0 +1,15 @@
+"use strict";
+exports.__esModule = true;
+var Library_1 = require("./Library");
+var Book_1 = require("./Book");
+var myBook = new Book_1.Book("Don Quijote de la Mancha", 1345, "8468025380", "Miguel de Cervantes", "Santillana");
+var myBook1 = new Book_1.Book("Sinsajo", 422, "978-987-609-244-9", "Collins, Suzanne", "Molino");
+var myBook2 = new Book_1.Book("La leyenda de Sleepy Hollow", 73, "978-84-9824-686-5", "Washington Irving", "Editorial Alba");
+var mybooks = [myBook, myBook1, myBook2];
+var miLibrary = new Library_1.Library(mybooks, "Sin Calle", "No tiene manager");
+miLibrary.setaddress("Carrer de Mariana Pineda, 93, 95");
+console.log(miLibrary.getaddress());
+miLibrary.setmanager(" Jacobo Smith");
+console.log(miLibrary.getmanager());
+console.log(miLibrary.getNumberOfBooks());
+console.log(miLibrary.findByAuthor("Adrian"));
